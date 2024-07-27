@@ -1,0 +1,14 @@
+syntax = "proto3";
+package transaction;
+
+message TransactionRequest {
+    int32 orderId = 1;
+}
+
+message TransactionResponse {
+    int32 txnId = 1;
+}
+
+service Transaction {
+    rpc GetTransaction (TransactionRequest) returns (TransactionResponse);
+}
